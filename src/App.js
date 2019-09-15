@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <h1>Tasks</h1>
-      <Task tasks={tasks}/>
+      <Task tasks={tasks} api={API}/>
     </div>
   );
 }
