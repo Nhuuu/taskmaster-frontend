@@ -3,7 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Task from './Task.js';
 import './App.css';
 
-const API = 'http://taskmaster-env.v2hyii2zyf.us-west-2.elasticbeanstalk.com/taskmaster/tasks';
+// const API = 'http://taskmaster-env.v2hyii2zyf.us-west-2.elasticbeanstalk.com/taskmaster/tasks';
+const API = 'https://mb58t93et1.execute-api.us-west-2.amazonaws.com/dev/tasks';
 
 function App() {
 
@@ -12,7 +13,9 @@ function App() {
 
   function _getTasks(){
     fetch(API)
-      .then(data => data.json())
+      .then(data => data.json()
+        // console.log(data)
+      )
       .then(fetchedTasks => setTasks(fetchedTasks));
   }
 
