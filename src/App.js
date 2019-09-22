@@ -13,9 +13,7 @@ function App() {
 
   function _getTasks(){
     fetch(API)
-      .then(data => data.json()
-        // console.log(data)
-      )
+      .then(data => data.json())
       .then(fetchedTasks => setTasks(fetchedTasks));
   }
 
@@ -24,8 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Tasks</h1>
+      <h1>TaskMaster</h1>
       <Task tasks={tasks} api={API}/>
+
+
+      {/* create a record form */}
+
     </div>
   );
 }

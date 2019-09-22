@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Form(props) {
+function UpdateStateForm(props) {
   return (
     <div>
       <form method="post" action={`${props.api}/${props.task.id}/images`} encType="multipart/form-data">
@@ -11,4 +11,4 @@ function Form(props) {
   )
 }
 
-export default Form;
+export default UpdateStateForm;
